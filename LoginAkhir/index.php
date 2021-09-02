@@ -30,26 +30,23 @@ if(empty($_SESSION['login'])){
 <?php endif; ?>
 			<div class="col-md-4 offset-md-4  mt-5">
 
-				<div class="alert alert-success" role="alert">
-				  Berhasil login ke dalam sistem.
-				</div>
+			<div class="alert alert-success" role="alert">
+			  Berhasil login ke dalam sistem.
+			</div>
 
-				<div class="card">
-					<div class="card-title text-center">
-						<h1>Halaman Admin</h1>
+			<div class="card">
+				<div class="card-title text-center">
+					<h1>Halaman Admin</h1>
 					</div>
 					<div class="card-body">
 						<p>Hello username</p>
 						<p>Kamu berhasil ke halaman admin.</p>
 
                     <a href="logout.php" >Logout</a>
-
 					</div>
 				</div>
 			</div>
-
 		</div>
-
 	</div>
 </body>
 </html>
