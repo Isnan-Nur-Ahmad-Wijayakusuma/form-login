@@ -34,7 +34,7 @@
                 <label for="genre">Kisaran harga</label>
 				<input type="text" name="kisaran" class="form-control" placeholder="type">
 			</div>
-				<button type="submit" name="submit" class="btn btn-primary">Submit</button>
+				<button type="submit" name="submit" class="btn btn-primary">Cari produk</button>
                 <input type="submit" name="array" class="btn btn-primary" value="Transform to array">
 			</form>
 		</div>
@@ -47,10 +47,8 @@
     interface produktipe {
         public function getTipeOS();
       }
-    //Hah?! This syntax FOR WHAT??
-    /*Yeah man, this is for Array from user input. And what you know guys?
-      Yup, this array will be check machine for input test*/
-    function printIterable(iterable $itemPutih)    {
+
+    function printIterable(iterable $itemPutih) {
         foreach ($itemPutih as $I) {
             echo $I;
         }
@@ -69,23 +67,23 @@
             $this->name = $name;
             $this->jenisProduk = $jenisProduk;
             $this->kisaran = $kisaran;
-        }
-        public function getTipeOS(){
-            return self::$OSTipe;
+        }       
+	public function intro(){
+            echo "Nama: {$this->name} | Type {$this->jenisProduk}<br>Kisaran harga:{$this->kisaran}<br>";
         }
         public function infoLengkap(){
             $key = array(self::$OSTipe, $this->name, $this->jenisProduk, $this->kisaran);
             return $key;
         }
-        public function intro(){
-            echo "Nama: {$this->name} | Type {$this->jenisProduk}<br>Kisaran harga:{$this->kisaran}<br>";
+	public function getTipeOS(){
+            return self::$OSTipe;
         }
         public function __destruct(){
             echo "Destruct func has been actived";
         }
     }
     //CHILD (pewarisan)
-    class laptop extends Produk {
+    class Laptop extends Produk {
         public function message(){   
             echo "[Laptop] ";
         }
